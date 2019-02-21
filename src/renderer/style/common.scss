@@ -1,0 +1,59 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-wrapper {
+  background-color: #e1e1e1;
+  padding: 0;
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.h100 {
+  height: 100%;
+}
+.fl-r {
+  float: right;
+}
+.mg-b10 {
+  margin-bottom: 10px;
+}
+.mg-l10 {
+  margin-left: 10px;
+}
+.mg-t10 {
+  margin-top: 10px;
+}
+.mg-b20 {
+  margin-bottom: 20px;
+}
+.mg-r15 {
+  margin-right: 15px;
+}
+.c-card {
+  background: #fff;
+  padding: 5px;
+}
+.c-cut-off-line {
+  height: 1px;
+  color: #ccc;
+}
+.bg-green {
+  background: green;
+}
+.bg-blue {
+  background: blue;
+}
+.bg-pink {
+  background: pink;
+}
+.bg-red {
+  background: red;
+}

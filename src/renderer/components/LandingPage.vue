@@ -37,7 +37,6 @@
   import listTemplateGen from './template/list/template'
   import listApiGen from './api/list'
   import listScriptGen from './script/list'
-  import jsBeautify from 'js-beautify'
   export default {
     name: 'landing-page',
     data () {
@@ -56,7 +55,11 @@
         let message = `你已选择${path}`
         console.log(message)
         this.projectPath = `${path}`
+        this.$db.set('project', {
+          path: this.projectPath
+        }).write()
       })
+      this.projectPath = this.$db.get('project').value() ? this.$db.get('project').value().path : ''
     },
     methods: {
       open (link) {
@@ -86,7 +89,7 @@
         // })
         let obj = JSON.parse(this.tableInterface)
         let tableName = 'tableDemo'
-        let listTemplate = jsBeautify.html(listTemplateGen(obj, tableName))
+        let listTemplate = listTemplateGen(obj, tableName)
         let listApiTemplate = listApiGen(tableName, this.tableInterfacePath)
         let listScriptTemplate = listScriptGen(tableName)
         console.log('模版是', listTemplate)
@@ -132,10 +135,10 @@
     border-radius: 2em;
     display: inline-block;
     color: #fff;
-    background-color: #4fc08d;
+    background-color: #a5dee4;;
     transition: all 0.15s ease;
     box-sizing: border-box;
-    border: 1px solid #4fc08d;
+    border: 1px solid #a5dee4;;
   }
 
   .information-title{
