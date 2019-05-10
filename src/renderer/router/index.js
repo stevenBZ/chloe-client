@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/project',
       name: 'project',
-      component: require('@/components/LandingPage').default
+      component: require('@/page/projectManage/index').default
     },
     {
       path: '/interface',
@@ -16,9 +16,19 @@ export default new Router({
       component: require('@/page/interface/index').default
     },
     {
-      path: '/templet',
-      name: 'templet',
-      component: require('@/page/templet/index').default
+      path: '/pageTemplete',
+      name: 'pageTemplete',
+      component: require('@/page/pageTemplate/index').default
+    },
+    {
+      path: '/pageTemplete/list',
+      name: 'pageTempleteList',
+      component: require('@/page/pageTemplate/detail/list/index').default
+    },
+    {
+      path: '/projectTemplete',
+      name: 'projectTemplete',
+      component: require('@/page/projectTemplate/index').default
     },
     {
       path: '*',

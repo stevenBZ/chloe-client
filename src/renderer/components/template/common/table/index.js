@@ -1,8 +1,7 @@
 import tableColumnGen from './table-column/index'
-export default function (interfaceData, tableName) {
-  let props = Object.keys(interfaceData)
+export default function (propsData, tableName) {
   let tableTemplate = ''
-  props.forEach(props => {
+  propsData.forEach(props => {
     let tableColumnTemplate = tableColumnGen(props)
     tableTemplate = `${tableTemplate}${tableColumnTemplate}\n`
   })

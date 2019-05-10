@@ -9,6 +9,12 @@
       <span class="detail-prop-value">{{ interfaceDetail.type }}</span>
     </div>
     <div class="mg-b20">
+      <span class="detial-prop-key mg-b10">Header: </span>
+      <simple-params-table 
+        :paramsList="headerList"
+        :paramsTypeList="paramsTypeList"></simple-params-table>
+    </div>
+    <div class="mg-b20">
       <span class="detial-prop-key mg-b10">路径参数: </span>
       <simple-params-table 
         :paramsList="paramsList"
@@ -17,7 +23,7 @@
     <div>
       <div class="flex-between">
         <span class="detial-prop-key mg-b10">请求数据: </span>
-        <el-radio v-for="item in reqDataTypeList" v-model="reqDataType" :label="item.name">{{ item.desc }}</el-radio>
+        <el-radio v-for="item in reqDataTypeList" :key="item.name" v-model="reqDataType" :label="item.name">{{ item.desc }}</el-radio>
       </div>
       <params-table 
         v-if="reqDataType === 'Object' || reqDataType === 'Array'"
@@ -45,6 +51,7 @@
                 type: 'String',
                 desc: '测试参数'
               }],
+              headerList: [],
               paramsTypeList: [{
                     name: 'String',
                     desc: '字符串'

@@ -13,17 +13,14 @@ if (process.type !== 'renderer') {
     fs.mkdirpSync(STORE_PATH)
   }
 }
-
-const adapter = new FileSync(path.join(STORE_PATH, '/data.json'))
+const adapter = new FileSync(path.join(__dirname, '/data.json'))
 
 const db = Datastore(adapter)
 db._.mixin(LodashId)
 
 
-if (!db.has('project').value()) {
-  db.set('project', {
-    path: ''
-  }).write()
+if (!db.has('projects').value()) {
+  db.set('projects', []).write()
 }
 
 export default db

@@ -10,8 +10,13 @@ export default [
         url: '/interface'
     },
     {
-        title: '模板管理',
+        title: '页面模板',
+        icon: 'icon-yemian',
+        url: '/pageTemplete'
+    },
+    {
+        title: '工程模板',
         icon: 'icon-mobanguanli',
-        url: '/templet'
+        url: '/projectTemplete'
     }
 ];

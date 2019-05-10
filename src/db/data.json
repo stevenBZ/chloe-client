@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "projectName": "测试工程",
+      "fileName": "ddd",
+      "path": "/Users/bob 1/mygitRepo/test"
+    },
+    {
+      "projectName": "我的克洛伊测试工程",
+      "fileName": "myChloeTestProject",
+      "path": "/Users/bob 1/mygitRepo/chloe/justTestIt"
+    },
+    {
+      "projectName": "ccccc",
+      "fileName": "wwwww",
+      "path": "/Users/bob 1/mygitRepo/chloe/justTestIt"
+    },
+    {
+      "projectName": "bbbb",
+      "fileName": "rrrr",
+      "path": "/Users/bob 1/mygitRepo/chloe/justTestIt"
+    },
+    {
+      "projectName": "bbbbbb",
+      "fileName": "tttttt",
+      "path": "/Users/bob 1/mygitRepo/chloe/justTestIt"
+    }
+  ]
+}
